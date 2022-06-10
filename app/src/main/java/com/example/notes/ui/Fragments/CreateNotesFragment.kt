@@ -9,7 +9,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import com.example.notes.Entity.Notes
+import com.example.notes.R
 import com.example.notes.ViewModel.NotesViewModel
 import com.example.notes.databinding.FragmentCreateNotesBinding
 import java.lang.String.format
@@ -63,6 +65,8 @@ class CreateNotesFragment : Fragment() {
         viewmodel.addNotes(data)
 
         Toast.makeText(requireContext(),"Notes Created ",Toast.LENGTH_SHORT).show()
+
+        Navigation.findNavController(it!!).navigate(R.id.action_createNotesFragment_to_homeFragment)
     }
 
 }
