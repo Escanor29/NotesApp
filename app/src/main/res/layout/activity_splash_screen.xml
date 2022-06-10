@@ -23,22 +23,24 @@
         android:layout_below="@+id/lottie"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
+        android:fontFamily="cursive"
         android:text="Make Notes"
         android:textColor="@color/black"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:fontFamily="@font/austria"/>
+        android:textSize="40dp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/makeNotes"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
-        android:text="Let's Explore ..."
+        android:fontFamily="cursive"
+        android:text="Start Where you are ."
         android:textColor="@color/black"
         android:textSize="30dp"
-        android:textStyle="normal"/>
+        android:textStyle="normal" />
 
 
 </RelativeLayout>

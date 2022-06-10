@@ -18,6 +18,7 @@ class CreateNotesFragment : Fragment() {
         (activity as AppCompatActivity).supportActionBar?.title = ""
     }
 
+
     lateinit var binding : FragmentCreateNotesBinding
 
     override fun onCreateView(

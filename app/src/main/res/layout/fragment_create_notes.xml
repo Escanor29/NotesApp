@@ -20,10 +20,11 @@
             android:background="@drawable/edit_text_shape"
             android:layout_marginTop="50dp"
             android:padding="10dp"
-            android:fontFamily="cursive"
+            android:fontFamily="sans-serif"
             android:textColorHint="@color/grey"
             android:maxLines="1"
             android:hint="Title.."
+            android:textColor="@color/black"
             />
 
         <EditText
@@ -32,24 +33,26 @@
             android:layout_height="80dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/edit_text_shape"
-            android:fontFamily="cursive"
+            android:fontFamily="sans-serif"
             android:hint="Subtitle..."
             android:maxLines="1"
             android:padding="10dp"
             android:gravity="start"
-            android:textColorHint="@color/grey" />
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/editNotes"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:background="@drawable/edit_text_shape"
             android:layout_marginTop="15dp"
-            android:padding="10dp"
-            android:fontFamily="cursive"
-            android:textColorHint="@color/grey"
+            android:background="@drawable/edit_text_shape"
+            android:fontFamily="sans-serif"
             android:gravity="start"
-            android:hint="Notes..."/>
+            android:hint="Notes..."
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey" />
 
     </LinearLayout>
 
