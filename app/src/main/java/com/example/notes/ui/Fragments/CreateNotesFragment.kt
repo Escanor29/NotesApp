@@ -14,7 +14,6 @@ import com.example.notes.Entity.Notes
 import com.example.notes.R
 import com.example.notes.ViewModel.NotesViewModel
 import com.example.notes.databinding.FragmentCreateNotesBinding
-import java.lang.String.format
 import java.util.*
 
 
