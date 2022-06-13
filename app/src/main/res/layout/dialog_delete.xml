@@ -16,12 +16,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Do you want to delete\n this Note ? "
+        android:textColor="@color/grey"
         android:layout_margin="10dp"
         android:textStyle="bold"
         android:textSize="18sp"
         android:gravity="center" />
 
     <TextView
+        android:id="@+id/dialog_no"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -30,9 +32,11 @@
         android:gravity="center"
         android:background="@drawable/no_button"
         android:text="No"
+        android:textColor="@color/grey"
         android:padding="10dp"/>
 
     <TextView
+        android:id="@+id/dialog_yes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -42,8 +46,7 @@
         android:textColor="@color/white"
         android:background="@drawable/yes_button"
         android:text="Yes"
+        android:layout_marginBottom="30dp"
         android:padding="10dp"/>
-
-
 
 </LinearLayout>
