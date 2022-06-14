@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.notes.R
 import com.example.notes.ViewModel.NotesViewModel
 import com.example.notes.databinding.FragmentHomeBinding
@@ -32,12 +34,15 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
 
         binding = FragmentHomeBinding.inflate(layoutInflater,container,false)
-        viewmodel.getNotes().observe(viewLifecycleOwner,{   notesList ->
 
-            binding.rcvNotes.layoutManager = GridLayoutManager(requireContext(),2)
+        val staggeredGridLayoutManager =
+            StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
+
+        binding.rcvNotes.layoutManager = staggeredGridLayoutManager
+
+        viewmodel.getNotes().observe(viewLifecycleOwner,{   notesList ->
             binding.rcvNotes.adapter = NotesAdapter(requireContext(),notesList)
         })
-
 
         binding.btnAddNotes.setOnClickListener{
             Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_createNotesFragment)
