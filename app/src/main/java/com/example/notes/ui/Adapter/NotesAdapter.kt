@@ -11,7 +11,13 @@ import com.example.notes.databinding.FragmentCreateNotesBinding
 import com.example.notes.databinding.ItemNotesBinding
 import com.example.notes.ui.Fragments.HomeFragmentDirections
 
-class NotesAdapter(val requireContext: Context,val notesList: List<Notes>) : RecyclerView.Adapter<NotesAdapter.notesViewHolder>(){
+class NotesAdapter(val requireContext: Context,var notesList: List<Notes>) : RecyclerView.Adapter<NotesAdapter.notesViewHolder>(){
+
+    fun filtering(newFilteredList: ArrayList<Notes>) {
+        notesList = newFilteredList
+        notifyDataSetChanged()
+    }
+
     class notesViewHolder(val binding: ItemNotesBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): notesViewHolder {
