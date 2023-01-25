@@ -17,12 +17,6 @@ import com.example.notes.ui.Adapter.NotesAdapter
 
 class HomeFragment : Fragment() {
 
-    //Change ActionBar title in fragment class
-    override fun onStart() {
-        super.onStart()
-        (activity as AppCompatActivity).supportActionBar?.title = ""
-    }
-
     lateinit var binding: FragmentHomeBinding
     val viewmodel : NotesViewModel by viewModels()
     var oldNotes = arrayListOf<Notes>()

@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_shape"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="80dp"
             android:padding="10dp"
             android:fontFamily="sans-serif"
             android:textColorHint="@color/grey"

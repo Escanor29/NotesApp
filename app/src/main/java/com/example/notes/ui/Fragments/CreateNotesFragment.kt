@@ -19,13 +19,6 @@ import java.util.*
 
 class CreateNotesFragment : Fragment() {
 
-    //Change ActionBar title in fragment class
-    override fun onStart() {
-        super.onStart()
-        (activity as AppCompatActivity).supportActionBar?.title = ""
-    }
-
-
     lateinit var binding : FragmentCreateNotesBinding
     val viewmodel : NotesViewModel by viewModels()
 
@@ -41,6 +34,7 @@ class CreateNotesFragment : Fragment() {
         binding.btnEditSaveNotes.setOnClickListener {
             createNotes(it)
         }
+
 
         return binding.root
     }
@@ -67,5 +61,6 @@ class CreateNotesFragment : Fragment() {
 
         Navigation.findNavController(it!!).navigate(R.id.action_createNotesFragment_to_homeFragment)
     }
+
 
 }

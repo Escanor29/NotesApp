@@ -20,12 +20,6 @@ import java.util.*
 
 class EditNotesFragment : Fragment() {
 
-    //Change ActionBar title in fragment class
-    override fun onStart() {
-        super.onStart()
-        (activity as AppCompatActivity).supportActionBar?.title = ""
-    }
-
     val oldNotes by navArgs<EditNotesFragmentArgs>()
     lateinit var binding: FragmentEditNotesBinding
     val viewmodel : NotesViewModel by viewModels()
@@ -81,7 +75,7 @@ class EditNotesFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId==R.id.menu_delete)
         {
-            val bottomSheet: BottomSheetDialog = BottomSheetDialog(requireContext(),R.style.BottomSeetStyle)
+            val bottomSheet: BottomSheetDialog = BottomSheetDialog(requireContext(),R.style.BottomSheetStyle)
             bottomSheet.setContentView(R.layout.dialog_delete)
 
             val texviewYes = bottomSheet.findViewById<TextView>(R.id.dialog_yes)
@@ -100,5 +94,7 @@ class EditNotesFragment : Fragment() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
 
 }
